@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="main">
+      <div className="topleft">
+        <p>SAP Exim</p>
+      </div>
+      <div className="middle">
+        <h1>COMING SOON</h1>
+        <hr />
+        <p>for any infomation call </p>
+        <a href="tel:+9193102 34436" className="link">
+          +91 93102-34436
         </a>
-      </header>
+      </div>
+      <div className="bottomleft">
+        <p>Address</p>
+        <p style={{ fontSize: 12 }}>
+          GROUND FLOOR, HOUSE NO-1402, SECTOR-3, BEHIND TAGORE SCHOOL,
+          Faridabad, Haryana, 121004
+        </p>
+      </div>
     </div>
   );
 }

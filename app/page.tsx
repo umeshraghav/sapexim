@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-slate-50">
       {/* Navigation */}
-      <nav className="flex justify-between items-center px-8 py-5 bg-[#0a2342] border-b-4 border-[#f39c12] sticky top-0 z-50 shadow-lg">
+      <nav className="flex justify-between items-center px-8 py-5 bg-[#538135] border-b-4 border-[#f39c12] sticky top-0 z-50 shadow-lg">
         <div className="text-2xl font-black text-white tracking-tighter">
           SAPEX<span className="text-[#f39c12]">IM</span>
         </div>
@@ -38,7 +38,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-24 px-8 md:px-20 bg-[#0a2342] text-white">
+      <section className="relative py-24 px-8 md:px-20 bg-[#538135] text-white">
         <div className="max-w-4xl">
           <span className="text-[#f39c12] font-bold tracking-widest uppercase text-sm">Industrial Integration Experts</span>
           <h1 className="text-4xl md:text-6xl font-extrabold mt-4 mb-6 leading-tight">
@@ -48,8 +48,8 @@ export default function Home() {
             From fire safety to high-voltage electrical, Sapexim provides the core technologies that keep global industries moving.
           </p>
           <div className="flex gap-4">
-            <button className="bg-[#f39c12] text-[#0a2342] px-8 py-3 font-bold uppercase hover:bg-white transition">Get a Quote</button>
-            <button className="border-2 border-white px-8 py-3 font-bold uppercase hover:bg-white hover:text-[#0a2342] transition">Browse Catalog</button>
+            <button className="bg-[#f39c12] text-[#538135] px-8 py-3 font-bold uppercase hover:bg-white transition">Get a Quote</button>
+            <button className="border-2 border-white px-8 py-3 font-bold uppercase hover:bg-white hover:text-[#538135] transition">Browse Catalog</button>
           </div>
         </div>
       </section>
@@ -58,17 +58,17 @@ export default function Home() {
       <section id="services" className="py-20 px-8 md:px-20">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 text-center">
-            <h2 className="text-3xl font-bold text-[#0a2342]">Our Core Services & Equipment</h2>
+            <h2 className="text-3xl font-bold text-[#538135]">Our Core Services & Equipment</h2>
             <div className="h-1 w-20 bg-[#f39c12] mx-auto mt-4"></div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <div key={index} className="bg-white p-8 border-b-4 border-transparent hover:border-[#f39c12] hover:shadow-2xl transition-all duration-300 flex flex-col items-start group">
-                <div className="text-[#f39c12] mb-6 p-3 bg-slate-50 group-hover:bg-[#0a2342] transition-colors rounded-lg">
+                <div className="text-[#f39c12] mb-6 p-3 bg-slate-50 group-hover:bg-[#538135] transition-colors rounded-lg">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold text-[#0a2342] mb-3">{service.title}</h3>
+                <h3 className="text-xl font-bold text-[#538135] mb-3">{service.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">
                   {service.desc}
                 </p>
@@ -79,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <footer id="contact" className="bg-[#0a2342] text-white py-16 px-8">
+      <footer id="contact" className="bg-[#538135] text-white py-16 px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
           <div className="text-center md:text-left">
             <h2 className="text-2xl font-bold">Ready to secure your facility?</h2>

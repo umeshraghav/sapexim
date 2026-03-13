@@ -1,108 +1,152 @@
+import React from 'react';
 import { 
-  Flame, 
-  Bell, 
-  ShieldAlert, 
-  Cctv, 
-  Key, 
-  Zap, 
-  Lightbulb, 
-  Network, 
-  Users 
+  Flame, Bell, ShieldAlert, Cctv, Key, Zap, 
+  Lightbulb, Network, Users, CheckCircle, Award 
 } from "lucide-react";
-import Link from 'next/link';
 
-export default function Home() {
+export default function SapeximLanding() {
   const services = [
-    { title: "Fire Detection System", icon: <Flame />, desc: "Advanced smoke, heat, and flame sensors with integrated suppression triggers." },
-    { title: "Nurse Call System", icon: <Bell />, desc: "Reliable communication infrastructure for healthcare facilities and emergency response." },
-    { title: "Security Alarm System", icon: <ShieldAlert />, desc: "Intrusion detection and perimeter security for industrial and commercial assets." },
-    { title: "Surveillance System", icon: <Cctv />, desc: "High-definition IP monitoring with AI-driven motion tracking and remote access." },
-    { title: "Access Control System", icon: <Key />, desc: "Biometric and RFID solutions to manage personnel flow and secure restricted zones." },
-    { title: "Electrical Equipment", icon: <Zap />, desc: "Full inventory of industrial-grade cables, switches, breakers, and distribution units." },
-    { title: "Lighting Automation", icon: <Lightbulb />, desc: "Smart energy-saving solutions with automated dimming and occupancy sensing." },
-    { title: "Networking", icon: <Network />, desc: "Structured cabling and robust networking hardware for seamless data integration." },
-    { title: "Consultancy", icon: <Users />, desc: "Expert technical audits, system design, and project management for complex installs." },
+    { id: 'a', title: "Fire Detection System", icon: <Flame />, desc: "Conventional, Semi-addressable, and Addressable systems." },
+    { id: 'b', title: "Nurse Call System", icon: <Bell />, desc: "High-reliability conventional systems for healthcare." },
+    { id: 'c', title: "Security Alarm System", icon: <ShieldAlert />, desc: "Burglar alarms, IP Video Door Phones, and Baggage Scanners." },
+    { id: 'd', title: "Surveillance System", icon: <Cctv />, desc: "CCTV, Under Vehicle Surveillance (UVSS), and Thermal Cameras." },
+    { id: 'e', title: "Access Control System", icon: <Key />, desc: "Stand-alone, Multi-door, Turnstiles, and Boom Barriers." },
+    { id: 'f', title: "Electrical & Lighting", icon: <Zap />, desc: "Cables, switches, fans, and Smart Home Lighting Automation." },
+    { id: 'h', title: "Networking", icon: <Network />, desc: "Complete Active and Passive networking infrastructure." },
+    { id: 'i', title: "Consultancy", icon: <Users />, desc: "Expert LV (Low Voltage) Services and system design." },
+  ];
+
+  const partners = [
+    { cat: "FAS", brands: "Honeywell, Edward, Apollo, Ravel, Daksh, Agni" },
+    { cat: "CCTV", brands: "Wisenet (Samsung), Honeywell, Hikvision, Dahua, UNV, Hi-focus" },
+    { cat: "ACS", brands: "HID, Honeywell, Morpho VIRDI, RBH, Syris" },
+    { cat: "Electrical", brands: "Panasonic Anchor, Havells, Polycab, KEI, Honeywell, RR" }
+  ];
+
+  const clients = [
+    "Apollo Hospital", "Hindustan Zinc Ltd", "Indian Oil Corporation", "Bharti Walmart", 
+    "Omaxe Group", "Eros Group", "Planetcast Media", "Shipra Group", "Ansal Green Escape",
+    "Amolik Buildcon", "Arttech Housing", "Basera Ventures", "Eldeco Mall"
   ];
 
   return (
-    <main className="min-h-screen bg-slate-50">
+    <div className="min-h-screen font-sans text-slate-900 bg-white">
       {/* Navigation */}
-      <nav className="flex justify-between items-center px-8 py-5 bg-[#538135] border-b-4 border-[#f39c12] sticky top-0 z-50 shadow-lg">
-        <div className="text-2xl font-black text-white tracking-tighter">
-          SAPEX<span className="text-[#f39c12]">IM</span>
+      <nav className="sticky top-0 z-50 bg-white border-b-4 border-[#538135] shadow-sm px-6 py-4 flex justify-between items-center">
+        <div className="text-2xl font-black tracking-tighter">
+          SAP <span className="text-[#538135]">EXIM</span>
         </div>
-        <div className="hidden md:flex space-x-6 text-xs font-bold uppercase tracking-widest text-slate-200">
-          <Link href="#services" className="hover:text-[#f39c12] transition">Services</Link>
-          <Link href="#contact" className="hover:text-[#f39c12] transition">Contact</Link>
+        <div className="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
+          <a href="#about" className="hover:text-[#538135]">About</a>
+          <a href="#services" className="hover:text-[#538135]">Services</a>
+          <a href="#partners" className="hover:text-[#538135]">Partners</a>
+          <a href="#clients" className="hover:text-[#538135]">Clients</a>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-24 px-8 md:px-20 bg-[#538135] text-white">
-        <div className="max-w-4xl">
-          <span className="text-[#f39c12] font-bold tracking-widest uppercase text-sm">Industrial Integration Experts</span>
-          <h1 className="text-4xl md:text-6xl font-extrabold mt-4 mb-6 leading-tight">
-            Integrated Systems for <br /> Modern Infrastructure.
-          </h1>
-          <p className="text-lg text-slate-300 max-w-2xl mb-8">
-            From fire safety to high-voltage electrical, Sapexim provides the core technologies that keep global industries moving.
-          </p>
-          <div className="flex gap-4">
-            <button className="bg-[#f39c12] text-[#538135] px-8 py-3 font-bold uppercase hover:bg-white transition">Get a Quote</button>
-            <button className="border-2 border-white px-8 py-3 font-bold uppercase hover:bg-white hover:text-[#538135] transition">Browse Catalog</button>
+      <section className="bg-slate-50 py-20 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+              Pioneers in <span className="text-[#538135]">Fire & Security</span> Services.
+            </h1>
+            <p className="text-lg text-slate-600 mb-8">
+              15+ years of expertise in delivering high-reliability LV services, 
+              from fire detection to smart automation.
+            </p>
+            <div className="flex gap-4">
+              <button className="bg-[#538135] text-white px-8 py-3 font-bold rounded hover:bg-opacity-90 transition">
+                REQUEST A QUOTE
+              </button>
+            </div>
+          </div>
+          <div className="bg-[#538135] p-8 rounded-2xl text-white shadow-2xl">
+            <h3 className="text-xl font-bold mb-4">Why SAP Exim?</h3>
+            <ul className="space-y-4">
+              <li className="flex gap-3 items-start"><CheckCircle className="text-green-200 shrink-0" /> 15+ Years Industry Experience</li>
+              <li className="flex gap-3 items-start"><CheckCircle className="text-green-200 shrink-0" /> In-house Conventional & Addressable Expertise</li>
+              <li className="flex gap-3 items-start"><CheckCircle className="text-green-200 shrink-0" /> Authorized System Integrators</li>
+              <li className="flex gap-3 items-start"><CheckCircle className="text-green-200 shrink-0" /> Post-Warranty AMC Support</li>
+            </ul>
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section id="services" className="py-20 px-8 md:px-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-16 text-center">
-            <h2 className="text-3xl font-bold text-[#538135]">Our Core Services & Equipment</h2>
-            <div className="h-1 w-20 bg-[#f39c12] mx-auto mt-4"></div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white p-8 border-b-4 border-transparent hover:border-[#f39c12] hover:shadow-2xl transition-all duration-300 flex flex-col items-start group">
-                <div className="text-[#f39c12] mb-6 p-3 bg-slate-50 group-hover:bg-[#538135] transition-colors rounded-lg">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-bold text-[#538135] mb-3">{service.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  {service.desc}
-                </p>
+      <section id="services" className="py-24 px-6 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold uppercase tracking-tighter">Our Services</h2>
+          <div className="h-1 w-20 bg-[#538135] mx-auto mt-4"></div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((s) => (
+            <div key={s.id} className="p-8 border border-gray-100 rounded-xl hover:shadow-xl transition-all group border-b-4 hover:border-b-[#538135]">
+              <div className="text-[#538135] mb-4 group-hover:scale-110 transition-transform">{s.icon}</div>
+              <h3 className="font-bold text-lg mb-2">{s.title}</h3>
+              <p className="text-slate-500 text-sm">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section id="partners" className="bg-slate-900 text-white py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
+            <Award className="text-[#538135]" /> Authorized System Integrators
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {partners.map((p, i) => (
+              <div key={i} className="bg-slate-800 p-6 rounded-lg border-l-4 border-[#538135]">
+                <h4 className="text-[#538135] font-bold text-sm uppercase mb-2">{p.cat}</h4>
+                <p className="text-slate-300">{p.brands}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <footer id="contact" className="bg-[#538135] text-white py-16 px-8">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-          <div className="text-center md:text-left">
-            <h2 className="text-2xl font-bold">Ready to secure your facility?</h2>
-            <p className="text-slate-400 mt-2">Speak to a Sapexim systems engineer today.</p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-6 text-sm font-mono">
-            <div className="flex flex-col">
-              <span className="text-[#f39c12] font-bold uppercase">Sales</span>
-              <span>info@sapexim.com</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[#f39c12] font-bold uppercase">Support</span>
-              <span>+91 0129 432 2864</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[#f39c12] font-bold uppercase">Address</span>
-              <span>Metro Pillar No. 688, Office No 9-10, First Floor Shyam Baba Market near, Faridabad, Haryana 121002</span>
-            </div>
-
-            
+      {/* Clients Section */}
+      <section id="clients" className="py-24 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl font-bold mb-10 text-center uppercase">Trusted By Leading Organizations</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            {clients.map((client, i) => (
+              <span key={i} className="px-4 py-2 bg-slate-50 text-slate-600 text-xs font-semibold rounded border border-slate-100 italic">
+                {client}
+              </span>
+            ))}
+            <span className="px-4 py-2 text-[#538135] text-xs font-bold italic">...and 100+ more</span>
           </div>
         </div>
+      </section>
+
+      {/* Contact/Footer */}
+      <footer className="bg-white border-t border-gray-100 pt-20 pb-10 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+          <div>
+            <div className="text-2xl font-black mb-6">SAP <span className="text-[#538135]">EXIM</span></div>
+            <p className="text-sm text-slate-500 italic">
+              "Only businesses which offer better, cheaper products and faster than their competitors survive."
+            </p>
+          </div>
+          <div>
+            <h4 className="font-bold mb-4 uppercase text-xs tracking-widest">Our Expertise</h4>
+            <p className="text-sm text-slate-600">
+              Specialized in Honeywell, Edward, GST, Cooper, Apollo, and more. 
+              Full infrastructure for scheduled project execution.
+            </p>
+          </div>
+          <div>
+            <h4 className="font-bold mb-4 uppercase text-xs tracking-widest text-[#538135]">Inquiries</h4>
+            <p className="text-sm text-slate-800 font-bold underline">Contact our sales team for AMC or New Projects.</p>
+          </div>
+        </div>
+        <div className="mt-20 text-center text-[10px] text-slate-400 uppercase tracking-widest">
+          © 2026 SAP EXIM  | All rights reserved | Designed by SAP EXIM Team
+        </div>
       </footer>
-    </main>
+    </div>
   );
 }

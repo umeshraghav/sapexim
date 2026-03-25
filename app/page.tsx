@@ -3,6 +3,8 @@ import {
   Flame, Bell, ShieldAlert, Cctv, Key, Zap, 
   Lightbulb, Network, Users, CheckCircle, Award 
 } from "lucide-react";
+import Photos from './Photo';
+import About from './About';
 
 export default function SapeximLanding() {
   const services = [
@@ -72,7 +74,7 @@ export default function SapeximLanding() {
           </div>
         </div>
       </section>
-
+<About />
       {/* Services Grid */}
       <section id="services" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -121,6 +123,7 @@ export default function SapeximLanding() {
           </div>
         </div>
       </section>
+      <Photos />
 
       {/* Contact/Footer */}
       <footer className="bg-white border-t border-gray-100 pt-20 pb-10 px-6">

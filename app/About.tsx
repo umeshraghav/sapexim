@@ -1,6 +1,6 @@
 import { Quote } from "lucide-react";
-
- 
+import Abhishek from "./Abhishek.png";
+ import Image from "next/image";
 
 export default function About() {
   return (
@@ -17,8 +17,8 @@ export default function About() {
               <div className="absolute -bottom-6 -right-6 w-full h-full border-4 border-[#538135] -z-10 rounded-lg hidden md:block"></div>
               <div className="aspect-[4/5] bg-slate-200 rounded-lg overflow-hidden shadow-2xl">
                 {/* Replace with actual photo: /public/founder-abhishek.jpg */}
-                <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" 
+                <Image 
+                  src={Abhishek} 
                   alt="Abhishek Chauhan - Founder of SAP Exim" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />

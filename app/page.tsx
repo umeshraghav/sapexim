@@ -16,7 +16,7 @@ export default function SapeximLanding() {
     { id: 'e', title: "Access Control System", icon: <Key />, desc: "Stand-alone, Multi-door, Turnstiles, and Boom Barriers." },
     { id: 'f', title: "Electrical & Lighting", icon: <Zap />, desc: "Cables, switches, fans, and Smart Home Lighting Automation." },
     { id: 'h', title: "Networking", icon: <Network />, desc: "Complete Active and Passive networking infrastructure." },
-    { id: 'i', title: "Building Management & Automation", icon: <Users />, desc: "ESimplifying building management with automation. Our integrated systems optimize efficiency, enhance comfort, and streamline operations for smarter buildings." },
+    { id: 'i', title: "Building Management & Automation", icon: <Users />, desc: "We integrate systems to boost efficiency, enhance comfort, and streamline your building’s operations." },
   ];
 
   const partners = [
@@ -44,6 +44,8 @@ export default function SapeximLanding() {
           <a href="#services" className="hover:text-[#538135]">Services</a>
           <a href="#partners" className="hover:text-[#538135]">Partners</a>
           <a href="#clients" className="hover:text-[#538135]">Clients</a>
+          <a href="#contact" className="hover:text-[#538135]">Contact</a>
+         
         </div>
       </nav>
 
@@ -125,7 +127,9 @@ export default function SapeximLanding() {
         </div>
       </section>
       <Photos />
-      <Contact />
+      <div id="contact">
+        <Contact />
+      </div>
 
       {/* Contact/Footer */}
       <footer className="bg-white border-t border-gray-100 pt-20 pb-10 px-6">

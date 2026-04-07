@@ -15,7 +15,7 @@ export default function SapeximLanding() {
     { id: 'e', title: "Access Control System", icon: <Key />, desc: "Stand-alone, Multi-door, Turnstiles, and Boom Barriers." },
     { id: 'f', title: "Electrical & Lighting", icon: <Zap />, desc: "Cables, switches, fans, and Smart Home Lighting Automation." },
     { id: 'h', title: "Networking", icon: <Network />, desc: "Complete Active and Passive networking infrastructure." },
-    { id: 'i', title: "Consultancy", icon: <Users />, desc: "Expert LV (Low Voltage) Services and system design." },
+    { id: 'i', title: "Building Management & Automation", icon: <Users />, desc: "ESimplifying building management with automation. Our integrated systems optimize efficiency, enhance comfort, and streamline operations for smarter buildings." },
   ];
 
   const partners = [
